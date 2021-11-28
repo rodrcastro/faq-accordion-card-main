@@ -1,0 +1,138 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  font-size: .75rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(180deg, #af67e9, #6565e7);
+  font-family: 'Kumbh Sans', sans-serif;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  height: 80%;
+  width: 80%;
+}
+
+.img__container {
+  height: 100%;
+  min-width: 472px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img__background {
+  position: absolute;
+  height: 180%;
+  width: 180%;
+  right: 15%;
+  top: -55%;
+}
+
+.img__woman {
+  position: relative;
+  top: 16%;
+  right: 17%;
+}
+
+.img__box {
+  position: absolute;
+  right: 85%;
+  top: 31%;
+  z-index: 1;
+}
+
+.accordion__container {
+  max-width: 75%;
+  margin: 2em auto;
+}
+
+.accordion__container .faq {
+  padding-left: 1rem;
+  font-weight: 700;
+}
+
+.accordion__article {
+  padding: .25rem 1rem;
+}
+
+.accordion__line {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.accordion__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  color: #4a4b5e;
+}
+
+.accordion__header:hover {
+  color: #f47c57;
+  cursor: pointer;
+}
+
+.accordion__title {
+  margin: 0;
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  margin-bottom: .75rem;
+  color: #787887;
+}
+
+.accordion__article--active .accordion__header > svg {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.accordion__article--active .accordion__title {
+  color: #1d1e35;
+}
+
+.accordion__article--active .accordion__content {
+  max-height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */

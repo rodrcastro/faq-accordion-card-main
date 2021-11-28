@@ -1,0 +1,141 @@
+$text-primary-blue: hsl(238, 29%, 16%);
+$text-primary-red: hsl(14, 88%, 65%);
+$background-violet: hsl(273, 75%, 66%);
+$background-blue: hsl(240, 73%, 65%);
+
+$text-neutral-blue: hsl(237, 12%, 33%);
+$text-neutral-darkblue: hsl(240, 6%, 50%);
+
+$divider: hsl(240, 5%, 91%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  font-size: .75rem;
+  background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  font-family: 'Kumbh Sans', sans-serif;
+  place-items: center;
+  min-height: 100vh;
+}
+
+
+.attribution { 
+  font-size: 11px;
+  text-align: center; 
+
+  & a {
+    color: hsl(228, 45%, 44%); 
+  }
+}
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  height: 80%;
+  width: 80%;
+  //overflow: hidden;
+}
+
+.img__container {
+  // background-image: url(../images/bg-pattern-desktop.svg);
+  // background-size: 100%;
+  // background-repeat: no-repeat;
+  // background-position: -200px 100px;
+  height: 100%;
+  min-width: 472px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img__background {
+  position: absolute;
+  height: 180%;
+  width: 180%;
+  right: 15%;
+  top: -55%;
+  //transform: rotateZ(10deg);
+}
+
+.img__woman {
+  position: relative;
+  top: 16%;
+  right: 17%;
+}
+
+.img__box {
+  position: absolute;
+  right: 85%;
+  top: 31%;
+  z-index: 1;
+}
+
+
+.accordion__container{
+  max-width: 75%;
+  margin: 2em auto;
+
+  & .faq {
+    padding-left: 1rem;
+    font-weight: 700;
+  }
+}
+
+.accordion__article{
+  // display: block;
+  padding: .25rem 1rem;
+}
+
+.accordion__line {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid $divider;
+}
+
+.accordion__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  color: $text-neutral-blue;
+
+  &:hover {
+    color: $text-primary-red;
+    cursor: pointer;
+  }
+}
+
+.accordion__title{
+  margin: 0;
+}
+
+.accordion__content{
+  max-height: 0;
+  overflow: hidden;
+  transition: 300ms;
+  margin-bottom: .75rem;
+  color: $text-neutral-darkblue;
+}
+
+.accordion__article--active {
+  & .accordion__header {
+    > svg {
+      transform: rotateX(180deg);
+      transition: 300ms;
+    }
+  }
+    & .accordion__title{
+    color: $text-primary-blue;
+  }
+
+  & .accordion__content{
+  max-height: 100vh;
+  }
+}
